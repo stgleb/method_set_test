@@ -19,3 +19,7 @@ BenchmarkInteface-4   	2000000000	         0.44 ns/op
 PASS
 ok  	_/home/stgleb/workspace/benchmethodset	25.838s
 ```
+
+Possible explanation can be found in interface source code 
+https://golang.org/src/runtime/iface.go Checking correspondence to 
+interface include locking and comparing two lists of methods in O(N + M)
