@@ -13,7 +13,9 @@ Run tests with
  Results shows substantial difference when using interface
  as an argument.
  
+```
 BenchmarkStruct-4     	2000000000	         0.02 ns/op
 BenchmarkInteface-4   	2000000000	         0.44 ns/op
 PASS
 ok  	_/home/stgleb/workspace/benchmethodset	25.838s
+```
