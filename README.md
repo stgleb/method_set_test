@@ -9,3 +9,11 @@ Run tests with
  to check that actual argument method set has all methods
  from interface implemented, so calling function in that
  way can be pretty longer.
+ 
+ Results shows substantial difference when using interface
+ as an argument.
+ 
+BenchmarkStruct-4     	2000000000	         0.02 ns/op
+BenchmarkInteface-4   	2000000000	         0.44 ns/op
+PASS
+ok  	_/home/stgleb/workspace/benchmethodset	25.838s
