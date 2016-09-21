@@ -15,8 +15,11 @@ Run tests with
  
 ```
 BenchmarkStruct-4     	1000000000	         0.03 ns/op
-BenchmarkInteface-4   	2000000000	         0.40 ns/op
-BenchmarkPointer-4    	2000000000	         0.01 ns/op
+BenchmarkInteface-4   	2000000000	         0.38 ns/op
+BenchmarkPointer-4    	1000000000	         0.03 ns/op
+BenchmarkE2I-4        	1000000000	         0.81 ns/op
+BenchmarkE2E-4        	1000000000	         0.03 ns/op
+BenchmarkP2I-4        	2000000000	         0.11 ns/op
 ```
 
 Possible explanation can be found in interface source code 

@@ -1,7 +1,6 @@
 package benchmethodset
 
 import (
-	"io"
 	"testing"
 )
 
@@ -11,9 +10,13 @@ var s MyStruct
 
 func foo(s MyStruct) {}
 
-func bar(r io.Reader) {}
+func bar(i interface{}) {}
 
-func baz(r io.Reader) {}
+func baz(i interface{}) {}
+
+func fizz(i interface{}) {}
+
+func fazz(i int) {}
 
 func BenchmarkStruct(b *testing.B) {
 	for i := 0; i < N; i++ {
@@ -31,6 +34,24 @@ func BenchmarkPointer(b *testing.B) {
 	for i := 0;i < N; i++ {
 		baz(&s)
 	}
+}
+
+func BenchmarkE2I(b *testing.B) {
+        for i := 0;i < N;i++ {
+                fizz(i)
+        }
+}
+
+func BenchmarkE2E(b *testing.B) {
+	for i := 0;i < N;i++ {
+		fazz(i)		
+	}
+}
+
+func BenchmarkP2I(b *testing.B) {
+        for i := 0;i < N;i++ {
+                fizz(&i)
+        }
 }
 
 type MyStruct struct{}
