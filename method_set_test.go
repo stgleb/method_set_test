@@ -9,13 +9,11 @@ const N = 100000000
 
 var s MyStruct
 
-func foo(s MyStruct) {
+func foo(s MyStruct) {}
 
-}
+func bar(r io.Reader) {}
 
-func bar(r io.Reader) {
-
-}
+func baz(r io.Reader) {}
 
 func BenchmarkStruct(b *testing.B) {
 	for i := 0; i < N; i++ {
@@ -26,6 +24,12 @@ func BenchmarkStruct(b *testing.B) {
 func BenchmarkInteface(b *testing.B) {
 	for i := 0; i < N; i++ {
 		bar(s)
+	}
+}
+
+func BenchmarkPointer(b *testing.B) {
+	for i := 0;i < N; i++ {
+		baz(&s)
 	}
 }
 

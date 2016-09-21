@@ -14,10 +14,9 @@ Run tests with
  as an argument.
  
 ```
-BenchmarkStruct-4     	2000000000	         0.02 ns/op
-BenchmarkInteface-4   	2000000000	         0.44 ns/op
-PASS
-ok  	_/home/stgleb/workspace/benchmethodset	25.838s
+BenchmarkStruct-4     	1000000000	         0.03 ns/op
+BenchmarkInteface-4   	2000000000	         0.40 ns/op
+BenchmarkPointer-4    	2000000000	         0.01 ns/op
 ```
 
 Possible explanation can be found in interface source code 
